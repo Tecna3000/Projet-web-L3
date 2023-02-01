@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tp1-web';
+  isAuth = false;
+   constructor() {
+     setTimeout(
+       () => {
+         this.isAuth = true;
+       }, 4000
+     );
+   }
+
+  allPresent() {
+    alert('Ils sont tous là !');0
+  }
 }
