@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tp1-web';
   isAuth = false;
+  studentOne = "Henri";
+  studentTwo ="Charles";
+  studentThree = "Louis";
    constructor() {
      setTimeout(
        () => {
@@ -17,6 +20,6 @@ export class AppComponent {
    }
 
   allPresent() {
-    alert('Ils sont tous là !');0
+    alert('Ils sont tous là !');
   }
 }

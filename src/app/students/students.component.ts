@@ -1,5 +1,4 @@
-
-import { Component,OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,8 +7,9 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  studentName: string = 'Henri';
-  studentStatus : string = 'present';
+  @Input() studentName: string = 'Henri';
+  @Input() studentStatus: string = 'present';
+
   constructor() { }
   ngOnInit() {
   }
