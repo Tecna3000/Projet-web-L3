@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tp1-web';
   isAuth = false;
+  lastUpdate:Promise<Date> = new Promise((resolve, reject) => {
+   const date = new Date();
+   setTimeout(
+   () => {
+   resolve(date);
+   }, 3000
+   );
+   });
+
+
 
   students = [
   {

@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h2>Les étudiants</h2>
+      <p>Mis à jour : {{ lastUpdate | date }}</p>
       <ul class="list-group">
         <app-students *ngFor="let student of students"
                       [studentName]="student.name"

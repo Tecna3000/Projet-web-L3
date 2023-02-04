@@ -15,4 +15,14 @@ export class StudentsComponent implements OnInit {
   }
   getStatus() {
     return this.studentStatus; }
+
+  getColor() {
+   if(this.studentStatus === 'present') {
+       return 'green';
+   }
+   else if(this.studentStatus === 'absent') {
+       return 'red';
+   }
+  }
+
 }
