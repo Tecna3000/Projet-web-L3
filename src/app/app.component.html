@@ -3,9 +3,10 @@
     <div class="col-xs-12">
       <h2>Les étudiants</h2>
       <ul class="list-group">
-        <app-students [studentName]="studentOne" [studentStatus]="'present'"></app-students>
-        <app-students [studentName]="studentTwo" [studentStatus]="'absent'"></app-students>
-        <app-students [studentName]="studentThree" [studentStatus]="'present'"></app-students>
+        <app-students *ngFor="let student of students"
+                      [studentName]="student.name"
+                      [studentStatus]="student.status"></app-students>
+
       </ul>
       <button class="btn btn-success" [disabled]="!isAuth" (click)="allPresent()">Tous Présents</button>    </div>
   </div>

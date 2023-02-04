@@ -8,9 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tp1-web';
   isAuth = false;
-  studentOne = "Henri";
-  studentTwo ="Charles";
-  studentThree = "Louis";
+
+  students = [
+  {
+  name : 'Louis',
+  statues: 'present',
+ },
+ {
+ name; 'Charles',
+ status : 'absent',
+ },
+ {
+ name : 'Henri',
+ status ; 'present',
+ }
+ ];
+
    constructor() {
      setTimeout(
        () => {
