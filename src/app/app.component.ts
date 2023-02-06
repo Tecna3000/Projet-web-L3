@@ -9,30 +9,29 @@ export class AppComponent {
   title = 'Tp1-web';
   isAuth = false;
   lastUpdate:Promise<Date> = new Promise((resolve, reject) => {
-   const date = new Date();
-   setTimeout(
-   () => {
-   resolve(date);
-   }, 3000
-   );
-   });
-
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 3000
+    );
+  });
 
 
   students = [
-  {
-  name : 'Louis',
-  statues: 'present',
- },
- {
- name; 'Charles',
- status : 'absent',
- },
- {
- name : 'Henri',
- status ; 'present',
- }
- ];
+    {
+      name: 'Louis',
+      status: 'present'
+    },
+    {
+      name: 'Charles',
+      status: 'absent'
+    },
+    {
+      name: 'Henri',
+      status: 'present'
+    }
+  ];
 
    constructor() {
      setTimeout(

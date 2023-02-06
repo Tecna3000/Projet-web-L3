@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  @Input() studentName: string = 'Henri';
-  @Input() studentStatus: string = 'present';
+  @Input() studentName!: string;
+  @Input() studentStatus!: string ;
 
   constructor() { }
   ngOnInit() {
@@ -23,6 +23,7 @@ export class StudentsComponent implements OnInit {
    else if(this.studentStatus === 'absent') {
        return 'red';
    }
+   return true;
   }
 
 }
