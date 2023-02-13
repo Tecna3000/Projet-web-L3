@@ -38,11 +38,12 @@ export class AppComponent implements OnInit {
 
   allPresent() {
     alert('Ils sont tous là !');
+    this.studentService.switchOnAll();
   }
 
 
   ngOnInit(): void {
-    this.students=this.studentService.students;
+    this.students = this.studentService.students;
   }
 
 }

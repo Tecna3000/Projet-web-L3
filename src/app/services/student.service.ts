@@ -23,5 +23,12 @@ export class studentService {
       student.status = 'absent';
     }
   }
+  switchOnOne(i: number) {
+    this.students[i].status = 'present';
+  }
+  switchOffOne(i: number) {
+    this.students[i].status = 'absent';
+  }
+
 }
 
