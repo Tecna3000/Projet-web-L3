@@ -8,8 +8,10 @@ import { StudentsComponent } from './students/students.component';
 import {studentService} from "./services/student.service";
 import { AuthComponent } from './auth/auth.component';
 import { StudentViewComponent } from './student-view/student-view.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
+
   declarations: [
     AppComponent,
     StudentsComponent,
