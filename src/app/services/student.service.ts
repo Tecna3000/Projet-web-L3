@@ -1,4 +1,4 @@
-export class StudentService {
+export class studentService {
   students = [
     {
       name: 'Louis',
@@ -13,4 +13,15 @@ export class StudentService {
       status: 'present'
     }
   ];
+  switchOnAll() {
+    for(let student of this.students) {
+      student.status = 'present';
+    }
+  }
+  switchOffAll() {
+    for(let student of this.students) {
+      student.status = 'absent';
+    }
+  }
 }
+

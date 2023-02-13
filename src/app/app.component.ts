@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {StudentService} from "./services/student.service";
+import {studentService} from "./services/student.service";
 
 @Component({
   selector: 'app-root',
@@ -20,19 +20,29 @@ export class AppComponent implements OnInit {
   });
 
 
-  constructor(private studentService: StudentService) {
+  constructor(private studentService: studentService) {
      setTimeout(
        () => {
          this.isAuth = true;
        }, 4000
      );
    }
+  allAbsent() {
+    if(confirm('Etes-vous sûr quils sont tous absents ?')) {
+      this.studentService.switchOffAll();
+    } else {
+      return null;
+    }
+    return null
+  }
 
   allPresent() {
     alert('Ils sont tous là !');
   }
 
+
   ngOnInit(): void {
     this.students=this.studentService.students;
   }
+
 }
