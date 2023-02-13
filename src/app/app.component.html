@@ -1,21 +1,18 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Authentification</a></li>
+        <li class="active"><a href="#">students</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>Les étudiants</h2>
-      <p>Mis à jour : {{lastUpdate | async | date }}</p>
-      <ul class="list-group">
-        <app-students *ngFor="let student of students; let i = index"
-                      [studentName]="student.name"
-                      [studentStatus]="student.status"
-        [id]="i" ></app-students>
-
-      </ul>
-    <button class="btn btn-success"
-            [disabled]="!isAuth"
-            (click)="allPresent()">Tous Présents</button>
-    <button class="btn btn-danger"
-            [disabled]="!isAuth"
-            (click)="allAbsent()">Tous Absent</button>
+      <app-student-view></app-student-view>
     </div>
   </div>
+
 </div>
