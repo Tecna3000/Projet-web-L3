@@ -1,4 +1,7 @@
+import {SingleStudentComponent} from "../single-student/single-student.component";
+
 export class studentService {
+  constructor(private singleStudentComponent:SingleStudentComponent){}
   students = [
     {
       name: 'Louis',

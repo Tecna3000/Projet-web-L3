@@ -10,13 +10,16 @@ import { AuthComponent } from './auth/auth.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import {AuthService} from "./services/auth.service";
+import { SingleStudentComponent } from './single-student/single-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
     AuthComponent,
-    StudentViewComponent
+    StudentViewComponent,
+    SingleStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {AppRoutingModule} from "./app-routing.module";
     RouterModule,
     AppRoutingModule
   ],
-  providers: [studentService],
+  providers: [studentService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
