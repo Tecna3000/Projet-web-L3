@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {studentService} from "../services/student.service";
 
 @Component({
@@ -7,6 +7,7 @@ import {studentService} from "../services/student.service";
   styleUrls: ['./student-view.component.css']
 })
 export class StudentViewComponent {
+  @Input() id: number | undefined
   isAuth = false;
   students!: any;
   lastUpdate:Promise<Date> = new Promise((resolve, reject) => {

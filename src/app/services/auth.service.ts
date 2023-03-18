@@ -1,23 +1,18 @@
-import {Injectable} from "@angular/core";
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthService{
-  isAuth:boolean = false;
-
-  signIn(){
+export class AuthService {
+  isAuth = false;
+  signIn() {
     return new Promise(
-      (resolve,reject) => {
-        setTimeout(() => {
-          this.isAuth = true;
-          resolve(true);
-        },1000);
+      (resolve, reject) => {
+        setTimeout(
+          () => {
+            this.isAuth = true;
+            resolve(true);
+          }, 3000
+        );
       }
-    )
+    );
   }
-
-  signOut(){
+  signOut() {
     this.isAuth = false;
   }
 }

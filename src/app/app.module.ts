@@ -10,8 +10,7 @@ import { AuthComponent } from './auth/auth.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
-import {AuthService} from "./services/auth.service";
-import { SingleStudentComponent } from './single-student/single-student.component';
+import {SingleStudentComponent} from "./single-student/single-student.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +27,7 @@ import { SingleStudentComponent } from './single-student/single-student.componen
     RouterModule,
     AppRoutingModule
   ],
-  providers: [studentService, AuthService],
+  providers: [studentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
