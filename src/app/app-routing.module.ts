@@ -9,8 +9,9 @@ import {SingleStudentComponent} from "./single-student/single-student.component"
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'students' },
-{ path: 'students', component: StudentViewComponent }, { path: 'students/:id', component: SingleStudentComponent },
-{ path: 'auth', component: AuthComponent }
+  { path: 'students', component: StudentViewComponent }, { path: 'students/:id', component: SingleStudentComponent },
+  { path: 'students/:id', component: SingleStudentComponent },
+  { path: 'auth', component: AuthComponent }
 ];
 
 

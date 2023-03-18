@@ -7,7 +7,7 @@
         <app-students *ngFor="let student of students; let i = index"
                       [studentName]="student.name"
                       [studentStatus]="student.status"
-                      [id]="i" ></app-students>
+                      [id]="student.id"></app-students>
         <a [routerLink]="[id]">Détail</a>
 
       </ul>

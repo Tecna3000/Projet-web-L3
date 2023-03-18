@@ -1,5 +1,6 @@
 import {SingleStudentComponent} from "../single-student/single-student.component";
 import {Injectable}  from "@angular/core";
+import {Router} from "@angular/router";
 
 
 @Injectable({
@@ -7,7 +8,7 @@ import {Injectable}  from "@angular/core";
 }
 )
 export class studentService {
-  constructor(private singleStudentComponent:SingleStudentComponent){}
+  constructor(private studentService:studentService){}
   students = [
     {
       id :1,
@@ -50,6 +51,5 @@ export class studentService {
     );
     return student;
   }
-
 }
 
