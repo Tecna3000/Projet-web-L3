@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit, OnDestroy {
 
-  users: User[];
-  userSubscription: Subscription;
+  users: User[] = [];
+  userSubscription: Subscription = new Subscription();
 
   constructor(private router: Router, private userService: UserService) { }
 

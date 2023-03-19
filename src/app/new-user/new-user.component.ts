@@ -13,8 +13,7 @@ import { FormArray } from '@angular/forms';
 })
 export class NewUserComponent implements OnInit {
 
-  userForm: FormGroup;
-
+  userForm: FormGroup = new FormGroup({});
   constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {

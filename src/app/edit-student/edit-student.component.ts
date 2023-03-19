@@ -21,7 +21,7 @@ export class EditStudentComponent implements OnInit {
     const name = form.value['name'];
     const status = form.value['status'];
     this.studentService.addStudent(name, status);
-    //this.router.navigate['students'];
+    this.router.navigate(['/students']);
   }
 
 }

@@ -14,7 +14,7 @@ export class AppComponent {
 }
 // import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 // import { Observable, Subscription ,interval} from 'rxjs';
-// import { StudentService } from './services/student.service';
+// import { studentService } from './services/student.service';
 //
 //
 // @Component({
@@ -30,10 +30,10 @@ export class AppComponent {
 //   ngOnInit(){
 //     const counter = Observable.interval(1000);
 //     this.counterSubscription = counter.subscribe(
-//       (value) => {
+//       (value: any) => {
 //         this.secondes = value;
 //       },
-//       (error) => {
+//       (error: string) => {
 //         console.log('An error occured ! : ' + error);
 //       },
 //       () => {
