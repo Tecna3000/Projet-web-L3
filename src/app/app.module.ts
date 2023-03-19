@@ -11,14 +11,15 @@ import { StudentViewComponent } from './student-view/student-view.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {SingleStudentComponent} from "./single-student/single-student.component";
-
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
     AuthComponent,
     StudentViewComponent,
-    SingleStudentComponent
+    SingleStudentComponent,
+    FourOhFourComponent
   ],
   imports: [
     BrowserModule,

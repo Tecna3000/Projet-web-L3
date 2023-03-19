@@ -1,4 +1,3 @@
-import {SingleStudentComponent} from "../single-student/single-student.component";
 import {Injectable}  from "@angular/core";
 import {Router} from "@angular/router";
 
@@ -8,7 +7,7 @@ import {Router} from "@angular/router";
 }
 )
 export class studentService {
-  constructor(private studentService:studentService){}
+  constructor(private router:Router){}
   students = [
     {
       id :1,
@@ -21,7 +20,7 @@ export class studentService {
       status: 'absent'
     },
     {
-      ide: 3,
+      id: 3,
       name: 'Henri',
       status: 'present'
     }
@@ -43,12 +42,16 @@ export class studentService {
     this.students[i].status = 'absent';
   }
 
-  getStudentById(id: number) {
+
+  getStudentById(id: number){
     const student = this.students.find(
-      (s) => {
-        return s.id === id;
+      (student:any) => {
+        return student.id === id;
       }
     );
+    if(!student){
+      this.router.navigate(['/not-found']).then(r =>{} );
+    }
     return student;
   }
 }

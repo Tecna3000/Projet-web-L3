@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { studentService } from './services/student.service';
 
 
 @Component({
@@ -7,6 +8,6 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tp1-web';
+  title = 'Student-app';
 
 }
