@@ -4,9 +4,10 @@ import {StudentViewComponent} from "./student-view/student-view.component";
 import {AuthComponent} from "./auth/auth.component";
 import {SingleStudentComponent} from "./single-student/single-student.component";
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
-
-
-
+import {EditStudentComponent} from "./edit-student/edit-student.component";
+import {AuthGuard} from "./services/auth-guard.service";
+import {UserListComponent} from "./user-list/user-list.component";
+import { NewUserComponent } from './new-user/new-user.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'students' },
@@ -14,7 +15,11 @@ const appRoutes: Routes = [
   { path: 'students/:id', component: SingleStudentComponent },
   { path: 'auth', component: AuthComponent },
   { path: 'not-found', component: FourOhFourComponent },
-  { path: '**', redirectTo: 'not-found' }
+  { path: '**', redirectTo: 'not-found' },
+  { path: 'edit', canActivate: [AuthGuard], component: EditStudentComponent },
+  { path: 'users', component: UserListComponent },
+  {path: 'new-user', component: NewUserComponent}
+
 ];
 
 
