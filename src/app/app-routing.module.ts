@@ -14,12 +14,11 @@ const appRoutes: Routes = [
   { path: 'students', component: StudentViewComponent },
   { path: 'students/:id', component: SingleStudentComponent },
   { path: 'auth', component: AuthComponent },
-  { path: 'not-found', component: FourOhFourComponent },
-  { path: '**', redirectTo: 'not-found' },
   { path: 'edit', canActivate: [AuthGuard], component: EditStudentComponent },
   { path: 'users', component: UserListComponent },
-  {path: 'new-user', component: NewUserComponent}
-
+  {path: 'new-user', component: NewUserComponent},
+  { path: 'not-found', component: FourOhFourComponent },
+  //{ path: '**', redirectTo: 'not-found' },
 ];
 
 
@@ -28,4 +27,5 @@ const appRoutes: Routes = [
   exports : [RouterModule]
 })
 export class AppRoutingModule { }
+export const routedComponents = [ StudentViewComponent, AuthComponent];
 

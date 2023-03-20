@@ -49,15 +49,12 @@ export class studentService {
   }
 
 
-  getStudentById(id: number){
+  getStudentById(id: number) {
     const student = this.students.find(
-      (student:any) => {
-        return student.id === id;
+      (s) => {
+        return s.id === id;
       }
     );
-    if(!student){
-      this.router.navigate(['/not-found']).then(r =>{} );
-    }
     return student;
   }
 
