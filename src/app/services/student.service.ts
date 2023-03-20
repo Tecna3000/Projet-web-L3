@@ -12,40 +12,44 @@ export class studentService {
   constructor(private router:Router){}
   private students = [
     {
-      id :1,
+      id :0,
       name: 'Louis',
       status: 'present'
     },
     {
-      id: 2,
+      id: 1,
       name: 'Charles',
       status: 'absent'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Henri',
       status: 'present'
     }
   ];
   switchOnAll() {
     for(let student of this.students) {
-      this.emitStudentSubject();
+
       student.status = 'present';
+      this.emitStudentSubject();
     }
   }
   switchOffAll() {
-    this.emitStudentSubject();
+
     for(let student of this.students) {
       student.status = 'absent';
+      this.emitStudentSubject();
+
     }
   }
   switchOnOne(i: number) {
-    this.emitStudentSubject();
+    console.log( i);
     this.students[i].status = 'present';
+    this.emitStudentSubject();
   }
   switchOffOne(i: number) {
-    this.emitStudentSubject();
     this.students[i].status = 'absent';
+    this.emitStudentSubject();
   }
 
 

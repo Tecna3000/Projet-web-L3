@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   { path: 'users', component: UserListComponent },
   {path: 'new-user', component: NewUserComponent},
   { path: 'not-found', component: FourOhFourComponent },
-  //{ path: '**', redirectTo: 'not-found' },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 

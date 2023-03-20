@@ -1,0 +1,42 @@
+.list-group {
+  margin: 20px 0;
+
+  .list-group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 5px;
+      font-size: 1em;
+    }
+
+    span {
+      font-style: italic;
+    }
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

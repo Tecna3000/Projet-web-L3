@@ -12,6 +12,8 @@ export class StudentsComponent implements OnInit {
   @Input() studentName!: string;
   @Input() studentStatus!: string ;
   @Input() id !: number;
+  @Input() i !: number;
+
 
   constructor(private studentService: studentService) { }
   ngOnInit() {
@@ -30,9 +32,10 @@ export class StudentsComponent implements OnInit {
   }
   onSwitch() {
     if(this.studentStatus === 'present') {
-      this.studentService.switchOffOne(this.id);
-    } else if(this.studentStatus === 'absent') {
-      this.studentService.switchOnOne(this.id);
+      this.studentService.switchOffOne(this.i);
+    }
+    else if(this.studentStatus === 'absent') {
+      this.studentService.switchOnOne(this.i);
     }
   }
 }

@@ -16,7 +16,7 @@ export class SingleStudentComponent implements OnInit{
   constructor(private studentService : studentService, private route: ActivatedRoute ) {
   }
   ngOnInit(): void {
-    const id = + this.route.snapshot.params['id'];
+    const id = this.route.snapshot.params['id'];
     this.student= this.studentService.getStudentById(+id);
     this.name=this.student?.name;
     this.status=this.student?.status;
